@@ -122,5 +122,15 @@ namespace SnowBurn
                 txtOutput.Text = mensagemErro;
             }
         }
+
+        private void cboPortaSerial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            spBurn.PortName = cboPortaSerial.Text;
+        }
+
+        private void cboModeloMCU_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

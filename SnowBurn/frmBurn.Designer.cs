@@ -68,6 +68,7 @@
             this.cboModeloMCU.Name = "cboModeloMCU";
             this.cboModeloMCU.Size = new System.Drawing.Size(117, 21);
             this.cboModeloMCU.TabIndex = 13;
+            this.cboModeloMCU.SelectedIndexChanged += new System.EventHandler(this.cboModeloMCU_SelectedIndexChanged);
             // 
             // btnBurn
             // 
@@ -96,6 +97,7 @@
             this.cboPortaSerial.Name = "cboPortaSerial";
             this.cboPortaSerial.Size = new System.Drawing.Size(117, 21);
             this.cboPortaSerial.TabIndex = 10;
+            this.cboPortaSerial.SelectedIndexChanged += new System.EventHandler(this.cboPortaSerial_SelectedIndexChanged);
             // 
             // txtOutput
             // 
