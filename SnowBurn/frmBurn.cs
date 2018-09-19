@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO.Ports;
 using System.IO;
 using System.Diagnostics;
 
@@ -35,19 +36,16 @@ namespace SnowBurn
         {
             string errorMessage = "";
 
-            for (int nPort = 1; nPort < 12; nPort++)
+            try
             {
-                spBurn.PortName = "COM" + nPort.ToString();
-
-                try
+                foreach (string portName in SerialPort.GetPortNames())
                 {
-                    spBurn.Open();
-                    cboPortaSerial.Items.Add(spBurn.PortName);
+                    cboPortaSerial.Items.Add(portName);
                 }
-                catch (Exception ex)
-                {
-                    errorMessage = ex.Message;
-                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = ex.Message;
             }
         }
 
