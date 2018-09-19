@@ -99,6 +99,10 @@
             this.cboPortaSerial.TabIndex = 10;
             this.cboPortaSerial.SelectedIndexChanged += new System.EventHandler(this.cboPortaSerial_SelectedIndexChanged);
             // 
+            // spBurn
+            // 
+            this.spBurn.BaudRate = 19200;
+            // 
             // txtOutput
             // 
             this.txtOutput.Location = new System.Drawing.Point(15, 182);
